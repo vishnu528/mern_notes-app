@@ -11,7 +11,7 @@ function Notes() {
   const createNote = () => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:3000/api/notes", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/notes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ function Notes() {
 
   function DeleteNotes (id) {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:3000/api/notes/${id}`,{
+    fetch(`${import.meta.env.VITE_API_URL}/${id}`,{
       method:"DELETE",
       headers:{
       Authorization:"Bearer " + token
@@ -43,7 +43,7 @@ function Notes() {
   }
   function updateNote (id) {
     const token = localStorage.getItem("token");
-    fetch(`http://localhost:3000/api/notes/${id}`,{
+    fetch(`${import.meta.env.VITE_API_URL}/${id}`,{
       method:"PUT",
       headers:{
         "Content-Type":"application/json",
@@ -64,7 +64,7 @@ function Notes() {
   useEffect(() => {
   const token = localStorage.getItem("token");
 
-  fetch("http://localhost:3000/api/notes", {
+  fetch(`${import.meta.env.VITE_API_URL}/api/notes`, {
     headers: {
       Authorization: "Bearer " + token
     }

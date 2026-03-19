@@ -3,7 +3,7 @@
     const [user,setUser] = useState("")
     useEffect(() => {
         const token = localStorage.getItem("token");
-        fetch("http://localhost:3000/api/auth/profile",{
+        fetch(`${import.meta.env.VITE_API_URL}/api/auth/profile`,{
             headers:{
                 authorization:"Bearer " + token
             }
