@@ -1,5 +1,6 @@
 import {BrowserRouter,Routes,Route,  } from "react-router-dom";
 import Login from "./pages/Login"
+import Register from "./pages/Register";
 import Profile from "./pages/Profile"
 import ProtectedRoute from "./components/ProtectedRoutes";
 import Notes from "./pages/Note";
@@ -12,6 +13,7 @@ function App(){
       <Navbar/>
         <Routes>
           <Route path="/" element = {<Login />} />
+          <Route path="/register" element = {<Register/>} />
           <Route path="/profile"  element = {<ProtectedRoute><Profile/></ProtectedRoute>} />
           <Route path="/Notes"  element={<ProtectedRoute><Notes/></ProtectedRoute>} />
         </Routes>

@@ -29,7 +29,7 @@ function Notes() {
 
   function DeleteNotes (id) {
     const token = localStorage.getItem("token");
-    fetch(`${import.meta.env.VITE_API_URL}/${id}`,{
+    fetch(`${import.meta.env.VITE_API_URL}/api/notes/${id}`,{
       method:"DELETE",
       headers:{
       Authorization:"Bearer " + token
@@ -43,7 +43,7 @@ function Notes() {
   }
   function updateNote (id) {
     const token = localStorage.getItem("token");
-    fetch(`${import.meta.env.VITE_API_URL}/${id}`,{
+    fetch(`${import.meta.env.VITE_API_URL}/api/notes/${id}`,{
       method:"PUT",
       headers:{
         "Content-Type":"application/json",
