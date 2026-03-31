@@ -1,9 +1,15 @@
 {
   "routes": [
     {
-      "src": "^/(assets/.*|favicon\\.ico)$",
+      "src": "^/(assets/.*|favicon\\.ico|.*\\.js|.*\\.css|.*\\.png|.*\\.svg)$",
       "dest": "/$1"
     },
+    
+    {
+      "src": "^/api/(.*)$",
+      "dest": "https://mern-notes-app-1-be6r.onrender.com/api/$1"
+    },
+    
     {
       "src": "/(.*)",
       "dest": "/index.html"
