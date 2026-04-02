@@ -20,5 +20,5 @@ app.use("/api",noteRouter)
 
 const PORT = 3000;
 app.listen(PORT,()=>{
-    console.log(`server is running in ${PORT}`);
+    console.log(`server is running in ${PORT}` );
 })
